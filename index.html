@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NyarukoのBlog</title>
+  <style>
+    @font-face {
+      font-family: "MyCustomFont";
+      src: url("font/SmileySans-Oblique.otf.woff2") format("woff2");
+    }
+
+    .left-section a.bilibili-link,
+    .left-section a.douyin-link {
+      font-family: "MyCustomFont", sans-serif;
+      padding: 10px 25px;
+    }
+
+    .category::after {
+      content: "更多";
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+      transform: translateY(1px);
+    }
+
+    .category.expanded::after {
+      content: "";
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+      transform: none;
+    }
+
+    .category-list {
+      list-style: none;
+      padding: 0;
+      margin-top: auto;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .category:hover .category-list {
+      display: block;
+    }
+
+    .category::after {
+      content: "";
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    body {
+      background-image: url("picture/background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "MyCustomFont", sans-serif;
+      font-size: 28px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav li a,
+    .read-more,
+    .category {
+      padding: 8px 16px;
+      border-radius: 20px;
+      background-color: #f0f0f0;
+      text-decoration: none;
+    }
+
+    footer {
+      color: white;
+    }
+
+    .content-wrapper {
+      border: 1px solid #c9e5f7;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: rgba(173, 216, 230, 0.7);
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .left-section {
+      flex-basis: 20%;
+      padding: 10px;
+      background-color: #e8e8e8;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-section {
+      flex-basis: 80%;
+      padding: 10px;
+    }
+
+    .content-wrapper h2 {
+      margin-top: 0;
+    }
+
+    .content-wrapper section article {
+      margin-bottom: 20px;
+    }
+
+    .content-wrapper section article h3 {
+      margin-top: 0;
+    }
+
+    .content-wrapper section article p {
+      margin-bottom: 10px;
+    }
+
+    .category-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    .category-list li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NyarukoのBlog</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">关于</a></li>
+      <li><a href="#">文章</a></li>
+      <li><a href="#">联系</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+      <div class="left-section">
+        <a href="https://space.bilibili.com/502920505" class="bilibili-link">
+          <img src="icon/bilibili.svg" alt="Bilibili" class="logo">
+          Bilibili
+        </a>
+        <a href="https://www.douyin.com/user/MS4wLjABAAAAfIK40r6mPAhrwq4jJSGUdSNzB0I51rAtrf6oON9keAdrJA7MlORuZzsJWRHwctDz" class="douyin-link">
+          <img src="icon/douyin.svg" alt="Douyin" class="logo">
+          Douyin
+        </a>
+        <div class="category expanded">
+          <!-- 分类列表 -->
+          <ul class="category-list">
+            <li><a href="#" class="category">音乐</a></li>
+            <li><a href="#" class="category">动漫</a></li>
+            <li><a href="#" class="category">日常</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <section>
+          <h2>最新文章</h2>
+          <article>
+            <h3>文章标题</h3>
+            <p>欢迎来到我的个人博客</p>
+            <a href="#" class="read-more">阅读更多</a>
+          </article>
+
+          <article>
+            <h3>另一篇文章标题</h3>
+            <p>暂无</p>
+            <a href="#" class="read-more">阅读更多</a>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 NyarukoのBlog. 版权所有</p>
+  </footer>
+</body>
+</html>
